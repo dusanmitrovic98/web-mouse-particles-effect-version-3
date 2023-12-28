@@ -95,3 +95,19 @@
 
       for (const particle of particles) {
         particle.update();
+        particle.draw();
+      }
+
+      requestAnimationFrame(animateParticles);
+    }
+
+    createParticles();
+    animateParticles();
+
+    window.addEventListener("mousemove", (event) => {
+      attractPoint.x = event.clientX;
+      attractPoint.y = event.clientY;
+    });
+  </script>
+</body>
+</html>
